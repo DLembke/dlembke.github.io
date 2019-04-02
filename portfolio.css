@@ -6,52 +6,53 @@ body {
     background-color: powderblue;
 }
 nav {
-    display: flex;
     position: fixed;
     width: 100%;
 }
 nav ul {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
     background-color: #966a76d5;
 }
 nav ul li {
     list-style: none;
     font-size: 25px;
-    padding: 10px 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-variant: small-caps;
+    padding: 10px 40px;
 }
 nav ul li a {
-    text-decoration: none;
-    color: black; 
+    height: 100%;
+    text-decoration: none !important;
+    color: black;
 }
 nav ul li:hover {
     background-color: white;
     cursor: pointer;
     height: 100%;
 }
-nav ul li a:hover {
-    text-decoration: none;
-}
-@media all and (max-width: 500px) {
-    nav > ul {
+@media only screen and (max-width: 768px) {
+    nav ul {
         flex-direction: column;
     }
     nav ul li {
-        width: 50%;
+        padding: 5px 5px;
+    }
+    nav ul li:hover {
+        background-color: transparent;
+    }
+    nav ul li a:hover {
+        color: white;
+    }
+    .projectsection {
+        display: flex;
+        flex-direction: column;
     }
 }
-section {
-    padding: 40px 2px 45px 2px;
-    border-style: hidden;
-    text-align: center;
-    width: 100%;
-    background-color: #ECE8E8;
-    height: auto;
-}
+
 #aboutMe {
+    display: flex;
+    object-fit: contain;
     background-image: url("computer.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%, cover;
@@ -61,20 +62,42 @@ section {
     padding-top: 150px;
     font-size: 35px;
 }
+#aboutMe > p {
+    width:500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 h3 {
     padding: 10px;
     font-variant: small-caps;
 }
-.projecttiles {
-    display: flex;
-    justify-content: center;
-} 
+#projectsection {
+    padding: 40px 2px 45px 2px;
+    border-style: hidden;
+    text-align: center;
+    width: 100%;
+    background-color: #ECE8E8;
+    height: auto;
+}
+@media only screen and (min-width: 950px){
+    .projectsection {
+        padding: 0;
+    }
+    .projecttiles {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    } 
+}
+.projects {
+    margin: 10px 75px;
+}
 .projectLinks {
     text-decoration: none;
     display: inline-block;
     overflow: hidden;
-    border: 2px solid rgb(82, 81, 81);
-    height: 220px;
+    height: 235px;
     width: 280px;
     margin: 40px 100px;
     border-radius: 5px;
@@ -83,9 +106,9 @@ h3 {
 .project-pic {
     width: 100%;
     height: 180px;
-    border-bottom: 2px solid rgb(82, 81, 81);
+    border-bottom: 2px solid white;
   }
-  .project-pic-title {
+.project-pic-title {
     text-align: center;
     font-weight: bold;
     font-size: 22px;
@@ -93,18 +116,40 @@ h3 {
     color: black;
     text-transform: uppercase;
     vertical-align: middle;
-    text-decoration-style: none;
+    margin-top: 20px;
 }
 .projectDescription {
     font-size: 20px;
     color: rgb(56, 56, 56);
     font-family: "Comic Sans MS", cursive, sans-serif;
     }
-#contactMe {
-    background-color: rgb(252, 252, 252); 
+.portfolio-pic {
+    height: auto; 
+    width: auto; 
+    max-width: 100px; 
+    max-height: 300px;
+    border: 2px solid white;
+    }
+.profileLink {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0 10px;
 }
-#footer {
+a:hover {
+    text-decoration: none !important;
+    transform: scale(1.2);
+}
+footer {
     background-color: #966a76d5;
+    padding: 40px 2px 45px 2px;
+    border-style: hidden;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+/* #contactMe {
+    background-color: rgb(252, 252, 252); 
 }
 .user-input {
     margin-top: 10px;
@@ -121,25 +166,6 @@ textarea {
     width: 400px;
     padding-left: 15px;
 }
-#aboutMe > p {
-    width:500px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-.portfolio-pic {
-    height: auto; 
-    width: auto; 
-    max-width: 100px; 
-    max-height: 300px;
-    border: 2px solid white;
-}
-.profileLink {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    margin: 0 10px;
-}
 #submit {
     width: 80px;
     height: 40px;
@@ -150,4 +176,4 @@ textarea {
     color: white;
     font-weight: 700;
     margin-top: 15px;
-}
+} */
